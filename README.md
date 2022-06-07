@@ -2,7 +2,7 @@
 
 ## Overview of the analysis: 
 
-The purpose of this analysis is to apply machine learning to solve a real-world problem :credit card risk.In this challenge we need to employ different techniques to train and evaluate models with unbalanced classes by using 
+The purpose of this analysis is to apply machine learning to solve a real-world problem :credit card risk. In this challenge we need to employ different techniques to train and evaluate models with unbalanced classes by using 
 imbalanced-learn and scikit-learn libraries to build and evaluate models using resampling. We will be do oversample the data using the RandomOverSampler and SMOTE algorithms, Undersample the data using the ClusterCentroids algorithm 
 and then using combinatorial approach of over- and undersampling using the SMOTEENN algorithm
 
@@ -24,7 +24,7 @@ The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) i
 The recall(sensitivity) for predicting Low Riskis 0.62 and High Risk is 0.65 
 The F1 score for Low Risk is 0.79 and for high risk is 0.02 as precision for High risk is low. 
 
-![](https://github.com/sumanpriyah/Amazon_Vine_Analysis/blob/main/Images/unpaid_df.png)
+![](https://github.com/sumanpriyah/Credit_Risk_Analysis/blob/main/Images/Naive_Random_Oversampling.png)
 
 
 ### SMOTE Oversampling
@@ -34,12 +34,16 @@ The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) i
 The recall(sensitivity) for predicting Low Risk is 0.62 and High Risk is 0.64 
 The F1 score for Low Risk is higher 0.78
 
+![](https://github.com/sumanpriyah/Credit_Risk_Analysis/blob/main/Images/SMOTE%20Oversampling.png)
+
 ### Undersampling
 Balance Accuracy Score = 63.03%
 The False Negative = 36 which means the Model predicted credit card risk as Low Risk but actually those are High risk.
 The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.01 
-The recall(sensitivity) for predicting Low Riskis 0.43 and High Risk is 0.59
+The recall(sensitivity) for predicting Low Risk is 0.43 and High Risk is 0.59
 The F1 score for High Risk is higher 0.60
+
+![](https://github.com/sumanpriyah/Credit_Risk_Analysis/blob/main/Images/Undersampling.png)
 
 ### Combination (Over and Under) Sampling-SMOTEENN algorithm to Predict Credit Risk
 Balance Accuracy Score = 62.48%
@@ -48,6 +52,8 @@ The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) i
 The recall(sensitivity) for predicting Low Risk is 0.54 and High Risk is 0.71
 The F1 score for Low Risk is higher 0.70
 
+![](https://github.com/sumanpriyah/Credit_Risk_Analysis/blob/main/Images/combination_over_under.png)
+
 
 ### Use Ensemble Classifiers to Predict Credit Risk
 
@@ -55,16 +61,19 @@ The F1 score for Low Risk is higher 0.70
 Balance Accuracy Score = 87.36%
 The False Negative = 30 which means the Model predicted credit card risk as Low Risk but actually those are High risk.
 The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.03 
-The recall(sensitivity) for predicting Low Riskis 0.87 and High Risk is 0.70
+The recall(sensitivity) for predicting Low Risk is 0.87 and High Risk is 0.70
 The F1 score for Low Risk is higher 0.60
+
+![](https://github.com/sumanpriyah/Credit_Risk_Analysis/blob/main/Images/Ensemble_learner_balancedrandomForestClassifier.png)
 
 ### Easy Ensemble AdaBoost Classifier
 Balance Accuracy Score = 95.03%
 The False Negative = 8 which means the Model predicted credit card risk as Low Risk but actually those are High risk.
 The precision of prediction using this model:Low Risk(1) is 1 and High Risk(0) is 0.09
-The recall(sensitivity) for predicting Low Riskis 0.94 and High Risk is 0.92
+The recall(sensitivity) for predicting Low Risk is 0.94 and High Risk is 0.92
 The F1 score for Low Risk is higher 0.97
 
+![](https://github.com/sumanpriyah/Credit_Risk_Analysis/blob/main/Images/Easy_ensemble_adaboost.png)
 
 ## Summary: 
 Out of all the above Models Easy Ensemble AdaBoost Classifier seems to be best the Model to predict credit Risk. The Accuracy score is 95.03%. The False Negatives are only 8 it means Model predicted those low risk but those are high risk, compare to 
